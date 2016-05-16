@@ -1,3 +1,7 @@
+-- EXTREMELY UNFINISHED, I HAVE NO IDEA WHAT I'M DOING
+--[[ Not even sure I wanna base it off hanubeki anymore, because it seems precisely tailored to that skin's oddities
+and not really useful as a universal noteskin script.]]
+
 local skin_name = Var("skin_name");
 return function(button_list, stepstype, skin_parameters)
 	local tapList = {
@@ -41,7 +45,7 @@ return function(button_list, stepstype, skin_parameters)
 		["HandLeft"]      	= {image = "hand chevron", rotZ = 270, rotY = 0},
 		["HandRight"]		= {image = "hand chevron", rotZ = 90, rotY = 0},
 	--[[	eventual dss notes to be multiplexed with ds3ddx
-		["HandUp"]			= {image = "hand neobloc vert", rotZ = 0, rotY = 0}
+		["HandUp"]		= {image = "hand neobloc vert", rotZ = 0, rotY = 0}
 		["HandDown"]		= {image = "hand neobloc vert", rotZ = 180, rotY = 0}
 		["HandLeft"]		= {image = "hand neobloc horiz", rotZ = 0, rotY = 0}
 		["HandRight"]		= {image = "hand neobloc horiz", rotZ = 180, rotY = 0}
