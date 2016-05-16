@@ -1,13 +1,13 @@
 ﻿return {
-	notes = "notes.lua",							-- Let's begin!
-	layers = {"receptors.lua", "explosions.lua"},	-- Eventually want to implement Mad Matt's column flashes, will that require a separate Lua file?
-	supports_all_buttons = true,					-- No more musical tofu. Although I have to question how useful this flag will be when custom gametypes come along...	
-	fallback = "hanubeki",							-- I love you
---	player_colors = {{}}							-- Masks kinda suck, although colorizable graphics would be nice.
+	notes = "notes.lua",					-- Let's begin!
+	layers = {"receptors.lua", "explosions.lua"},		-- Eventually want to implement Mad Matt's column flashes, will that require a separate Lua file?
+	supports_all_buttons = true,				-- No more musical tofu. Although I have to question how useful this flag will be when custom gametypes come along...	
+	fallback = "hanubeki",					-- I love you
+--	player_colors = {{}}					-- Masks kinda suck, although colorizable graphics would be nice.
 	skin_parameters = {
 		receptors = {
-			warning_time = 1,						--[[ Keeping Kyzentun's warning time because it's cool. 
-													Want a darkening effect instead of coloring, but not sure how to pull it off at present.]]
+			warning_time = 1,			--[[ Keeping Kyzentun's warning time because it's cool. 
+								Want a darkening effect instead of coloring, but not sure how to pull it off at present.]]
 		},
 	},
 	skin_parameter_info = {
