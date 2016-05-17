@@ -1,26 +1,30 @@
+-- Based on hanubeki 5.1-alpha6
 -- EXTREMELY UNFINISHED, I HAVE NO IDEA WHAT I'M DOING
 --[[ Not even sure I wanna base it off hanubeki anymore, because it seems precisely tailored to that skin's oddities
 and not really useful as a universal noteskin script.]]
+
+--[[ For convenience, I will tag anything that I haven't gone through,
+via comments that say "KAI LEAVES" and "KAI COMES BACK"]]
 
 local skin_name = Var("skin_name");
 return function(button_list, stepstype, skin_parameters)
 	local tapList = {
 		-- Dance, Pump, Techno
-		["Up"]       	= {image = "tap ortho arrow", rotZ = 180, rotY = 0},	-- from down
-		["Down"]      	= {image = "tap ortho arrow", rotZ = 0, rotY = 0},
-		["Left"]      	= {image = "tap ortho arrow", rotZ = 90, rotY = 0},
-		["Right"]     	= {image = "tap ortho arrow", rotZ = 270, rotY = 0},
-		["UpLeft"]    	= {image = "tap diag arrow", rotZ = 0, rotY = 0},	-- from upleft
-		["UpRight"]   	= {image = "tap diag arrow", rotZ = 90, rotY = 0},
-		["DownLeft"]  	= {image = "tap diag arrow", rotZ = 270, rotY = 0},
+		["Up"]			= {image = "tap ortho arrow", rotZ = 180, rotY = 0},	-- from down
+		["Down"]		= {image = "tap ortho arrow", rotZ = 0, rotY = 0},
+		["Left"]		= {image = "tap ortho arrow", rotZ = 90, rotY = 0},
+		["Right"]		= {image = "tap ortho arrow", rotZ = 270, rotY = 0},
+		["UpLeft"]		= {image = "tap diag arrow", rotZ = 0, rotY = 0},	-- from upleft
+		["UpRight"]		= {image = "tap diag arrow", rotZ = 90, rotY = 0},
+		["DownLeft"]	= {image = "tap diag arrow", rotZ = 270, rotY = 0},
 		["DownRight"] 	= {image = "tap diag arrow", rotZ = 180, rotY = 0},
 		["Center"]    	= {image = "tap center", rotZ = 0, rotY = 0},
 		-- Para (plus future 2-level para mode, maybe)
-		["ParaUp"]      = {image = "para forward", rotZ = 0, rotY = 0},
-		["ParaLeft"]    = {image = "para sides", rotZ = 0, rotY = 0},		-- from left
-		["ParaRight"]   = {image = "para forward", rotZ = 180, rotY = 0},
-		["ParaUpLeft"]  = {image = "para diag", rotZ = 0, rotY = 0},		-- from upleft
-		["ParaUpRight"] = {image = "para diag", rotZ = 90, rotY = 0},
+		["ParaUp"]		= {image = "para forward", rotZ = 0, rotY = 0},
+		["ParaLeft"]	= {image = "para sides", rotZ = 0, rotY = 0},		-- from left
+		["ParaRight"]	= {image = "para forward", rotZ = 180, rotY = 0},
+		["ParaUpLeft"]	= {image = "para diag", rotZ = 0, rotY = 0},		-- from upleft
+		["ParaUpRight"]	= {image = "para diag", rotZ = 90, rotY = 0},
 	--[[
 		["ParaL1Up"]		= {image = "2para petal", rotZ = 0, rotY = 0},   -- from down
 		["ParaL1Left"]		= {image = "2para petal", rotZ = 60, rotY = 0}
@@ -34,66 +38,68 @@ return function(button_list, stepstype, skin_parameters)
 		["ParaL2UpRight"]	= {image = "2para petal", rotZ = 210, rotY = 0}
 	]]	
 		-- ez2, ds3ddx (dss eventually)
-		["FootDown"]      	= {image = "tap ortho arrow", rotZ = 0, rotY = 0},
+		["FootDown"]		= {image = "tap ortho arrow", rotZ = 0, rotY = 0},
 		["FootUpLeft"]		= {image = "tap diag arrow", rotZ = 0, rotY = 0},
 		["FootUpRight"]		= {image = "tap diag arrow", rotZ = 90, rotY = 0},
-		["FootDownLeft"]  	= {image = "tap diag arrow", rotZ = 270, rotY = 0},
-		["FootDownRight"] 	= {image = "tap diag arrow", rotZ = 180, rotY = 0},
-	--	["FootCenter"]	  	= {image = "tap center", rotZ = 0, rotY = 0}
-		["HandUp"]        	= {image = "hand chevron", rotZ = 0, rotY = 0}, 	-- all from up
-		["HandDown"]      	= {image = "hand chevron", rotZ = 180, rotY = 0},
-		["HandLeft"]      	= {image = "hand chevron", rotZ = 270, rotY = 0},
+		["FootDownLeft"]	= {image = "tap diag arrow", rotZ = 270, rotY = 0},
+		["FootDownRight"]	= {image = "tap diag arrow", rotZ = 180, rotY = 0},
+	--	["FootCenter"]		= {image = "tap center", rotZ = 0, rotY = 0}
+		["HandUp"]			= {image = "hand chevron", rotZ = 0, rotY = 0}, 	-- all from up
+		["HandDown"]		= {image = "hand chevron", rotZ = 180, rotY = 0},
+		["HandLeft"]		= {image = "hand chevron", rotZ = 270, rotY = 0},
 		["HandRight"]		= {image = "hand chevron", rotZ = 90, rotY = 0},
 	--[[	eventual dss notes to be multiplexed with ds3ddx
-		["HandUp"]		= {image = "hand neobloc vert", rotZ = 0, rotY = 0}
+		["HandUp"]			= {image = "hand neobloc vert", rotZ = 0, rotY = 0}
 		["HandDown"]		= {image = "hand neobloc vert", rotZ = 180, rotY = 0}
 		["HandLeft"]		= {image = "hand neobloc horiz", rotZ = 0, rotY = 0}
 		["HandRight"]		= {image = "hand neobloc horiz", rotZ = 180, rotY = 0}
 	]]
 		["HandUpLeft"]		= {image = "hand circle", rotZ = 0, rotY = 0},
-		["HandUpRight"]   	= {image = "hand circle", rotZ = 0, rotY = 0},
-		["HandLrLeft"]    	= {image = "hand circle", rotZ = 0, rotY = 0},
-		["HandLrRight"]   	= {image = "hand circle", rotZ = 0, rotY = 0},
+		["HandUpRight"]		= {image = "hand circle", rotZ = 0, rotY = 0},
+		["HandLrLeft"]		= {image = "hand circle", rotZ = 0, rotY = 0},
+		["HandLrRight"]		= {image = "hand circle", rotZ = 0, rotY = 0},
 		-- kb7, beat
 		["Key1"]			= {image = "key generic", rotZ = 0, rotY = 0},
-		["Key2"]         	= {image = "key generic", rotZ = 0, rotY = 0},
-		["Key3"]         	= {image = "key generic", rotZ = 0, rotY = 0},
+		["Key2"]        	= {image = "key generic", rotZ = 0, rotY = 0},
+		["Key3"]			= {image = "key generic", rotZ = 0, rotY = 0},
 		if stepstype == "StepsType_Kb7_Single" then							-- update for ksmash
-			["Key4"]     	 = {image = "key thumb", rotZ = 0, rotY = 0},
+			["Key4"]		= {image = "key thumb", rotZ = 0, rotY = 0},
 		else	
-			["Key4"]    	 = {image = "key generic", rotZ = 0, rotY = 0},
+			["Key4"]		= {image = "key generic", rotZ = 0, rotY = 0},
 		end
-		["Key5"]         = {image = "key generic", rotZ = 0, rotY = 0},
-		["Key6"]         = {image = "key generic", rotZ = 0, rotY = 0},
-		["Key7"]         = {image = "key generic", rotZ = 0, rotY = 0},
-		["Scratch"]      = {image = "scratch generic", rotZ = 0, rotY = 0},
-		["Scratch up"]   = {image = "scratch up", rotZ = 0, rotY = 0},
-		["Scratch down"] = {image = "scratch down", rotZ = 0, rotY = 0},
+		["Key5"]			= {image = "key generic", rotZ = 0, rotY = 0},
+		["Key6"]			= {image = "key generic", rotZ = 0, rotY = 0},
+		["Key7"]			= {image = "key generic", rotZ = 0, rotY = 0},
+		["Scratch"]			= {image = "scratch generic", rotZ = 0, rotY = 0},
+		["Scratch up"]		= {image = "scratch up", rotZ = 0, rotY = 0},
+		["Scratch down"]	= {image = "scratch down", rotZ = 0, rotY = 0},
 		-- popn
-		["Left White"]   = {image = "square", rotZ = 0, rotY = 0},
-		["Left Yellow"]  = {image = "square", rotZ = 0, rotY = 0},
-		["Left Green"]   = {image = "square", rotZ = 0, rotY = 0},
-		["Left Blue"]    = {image = "square", rotZ = 0, rotY = 0},
-		["Red"]          = {image = "square", rotZ = 0, rotY = 0},
-		["Right Blue"]   = {image = "square", rotZ = 0, rotY = 0},
-		["Right Green"]  = {image = "square", rotZ = 0, rotY = 0},
-		["Right Yellow"] = {image = "square", rotZ = 0, rotY = 0},
-		["Right White"]  = {image = "square", rotZ = 0, rotY = 0},
+		["Left White"]		= {image = "square", rotZ = 0, rotY = 0},
+		["Left Yellow"]		= {image = "square", rotZ = 0, rotY = 0},
+		["Left Green"]		= {image = "square", rotZ = 0, rotY = 0},
+		["Left Blue"]		= {image = "square", rotZ = 0, rotY = 0},
+		["Red"]				= {image = "square", rotZ = 0, rotY = 0},
+		["Right Blue"]		= {image = "square", rotZ = 0, rotY = 0},
+		["Right Green"]		= {image = "square", rotZ = 0, rotY = 0},
+		["Right Yellow"]	= {image = "square", rotZ = 0, rotY = 0},
+		["Right White"]		= {image = "square", rotZ = 0, rotY = 0},
 		-- kickbox
-		["DownLeftFoot"]  = {image = "rightfoot", rotZ = 0, rotY = 180}, -- Down: blue
-		["LeftFoot"]      = {image = "rightfoot", rotZ = 0, rotY = 180}, -- Any:  yellow
-		["UpLeftFoot"]    = {image = "rightfoot", rotZ = 0, rotY = 180}, -- Up:   red
-		["UpLeftFist"]    = {image = "rightfist", rotZ = 0, rotY = 180},
-		["LeftFist"]      = {image = "rightfist", rotZ = 0, rotY = 180},
-		["DownLeftFist"]  = {image = "rightfist", rotZ = 0, rotY = 180},
-		["DownRightFist"] = {image = "rightfist", rotZ = 0, rotY = 0},
-		["RightFist"]     = {image = "rightfist", rotZ = 0, rotY = 0},
-		["UpRightFist"]   = {image = "rightfist", rotZ = 0, rotY = 0},
-		["UpRightFoot"]   = {image = "rightfoot", rotZ = 0, rotY = 0},
-		["RightFoot"]     = {image = "rightfoot", rotZ = 0, rotY = 0},
-		["DownRightFoot"] = {image = "rightfoot", rotZ = 0, rotY = 0},
+		["DownLeftFoot"]	= {image = "rightfoot", rotZ = 0, rotY = 180}, -- Down: blue
+		["LeftFoot"]		= {image = "rightfoot", rotZ = 0, rotY = 180}, -- Any:  yellow
+		["UpLeftFoot"]		= {image = "rightfoot", rotZ = 0, rotY = 180}, -- Up:   red
+		["UpLeftFist"]		= {image = "rightfist", rotZ = 0, rotY = 180},
+		["LeftFist"]		= {image = "rightfist", rotZ = 0, rotY = 180},
+		["DownLeftFist"]	= {image = "rightfist", rotZ = 0, rotY = 180},
+		["DownRightFist"]	= {image = "rightfist", rotZ = 0, rotY = 0},
+		["RightFist"]		= {image = "rightfist", rotZ = 0, rotY = 0},
+		["UpRightFist"]		= {image = "rightfist", rotZ = 0, rotY = 0},
+		["UpRightFoot"]		= {image = "rightfoot", rotZ = 0, rotY = 0},
+		["RightFoot"]		= {image = "rightfoot", rotZ = 0, rotY = 0},
+		["DownRightFoot"]	= {image = "rightfoot", rotZ = 0, rotY = 0},
 	};
 
+	-- *** KAI LEAVES ***
+	
 	setmetatable(tapList, {
 		__index = function(table, key, value)
 			return {image = "fallback", rotZ = 0, rotY = 0};
@@ -474,6 +480,8 @@ return function(button_list, stepstype, skin_parameters)
 		end
 	});
 
+-- *** KAI COMES BACK ***
+	
 	local columnPadding = {
 		-- ez2: inaccurate
 		StepsType_Ez2_Real = {0, -24, 0, 0, 0, -24, 0},
@@ -504,6 +512,138 @@ return function(button_list, stepstype, skin_parameters)
 		end
 	});
 
+--[[
+Column Color Reference for "tap_xxx_arrow":
+	3: Hot Pink 	(dance verts)
+	7: Neon Green	(dance diags, techno horiz)
+	11: Baby Blue	(dance horiz)
+	15: Apple Red	(ez2 diags, pump upper, ds3ddx upper)
+	19: Cream Yellow(ez2 down)
+	23: Azure		(pump/ds3ddx/dss/techno lower diags)
+	27: Red		(techno/dss upper diags)
+	31: Yellow		(techno verts)	
+	35: Reserved - Reflex Spice
+	39: Reserved - Reflex Purple
+	43: Reserved - Reflex Spice
+	47: Reserved - Reflex Purple
+	51: Reserved - Reflex Spice
+	55: Reserved - Reflex Purple
+	59: Reserved - Reflex Spice
+	63: Reserved - Reflex Purple
+	
+	This pattern is repeated in both images just for consistency.
+]]
+	local columnColorList = {
+		-- dance: be free from your prison of red!
+		StepsType_Dance_Single = {11, 3, 3, 11},
+		StepsType_Dance_Double = {11, 3, 3, 11, 11, 3, 3, 11},
+		StepsType_Dance_Couple = {11, 3, 3, 11, 11, 3, 3, 11},
+		StepsType_Dance_Solo = {11, 7, 3, 3, 7, 11},
+		StepsType_Dance_Threepanel = {7, 3, 7},
+		StepsType_Dance_Routine = {11, 3, 3, 11, 11, 3, 3, 11},
+
+		-- pump: tap_center has only yellow at 43.
+		StepsType_Pump_Single = {23, 15, 43, 15, 23},
+		StepsType_Pump_Halfdouble = {43, 15, 23, 23, 15, 43},
+		StepsType_Pump_Double = {23, 15, 43, 15, 23, 23, 15, 43, 15, 23},
+		StepsType_Pump_Couple = {23, 15, 43, 1, 23, 23, 15, 43, 15, 23},
+		StepsType_Pump_Routine = {23, 15, 43, 1, 23, 23, 15, 43, 15, 23},
+		
+		-- ez2: circles have upper blue (3) and lower green (7)
+		StepsType_Ez2_Single = {15, 3, 19, 3, 15},
+		StepsType_Ez2_Double = {15, 3, 19, 3, 15, 15, 3, 7, 3, 15},
+		StepsType_Ez2_Real = {15, 7, 3, 19, 3, 7, 15},
+
+		-- para: all magenta (3). Azure (7), Gold (11), and Green (15) exist for future plans.
+		StepsType_Para_Single = {3, 3, 3, 3, 3},
+--		StepsType_Para_Real = {3, 7, 3, 7, 3, 7, 3, 7, 3, 7},
+--		StepsType_Para_Surround = {11, 3, 3, 11, 3, 3, 3, 11},
+--		StepsType_Para_Exhibition = {3, 11, 11, 11, 3},
+--		StepsType_Para_ExReal = {3, 7, 11, 15, 11, 15, 11, 15, 3, 7},
+
+		-- ds3ddx: hands have orange (3) and green (7)
+		StepsType_Ds3ddx_Single = {3, 23, 15, 7, 7, 15, 23, 3},
+		
+		-- dss: i'll deal with you later.
+--		StepsType_DSS_Single = {3, 23, 15, 7, 43, 7, 15, 23, 3},
+--		StepsType_DSS_Double = {3, 23, 15, 7, 43, 7, 15, 23, 3, 3, 23, 15, 7, 43, 7, 15, 23, 3}
+--		StepsType_DSS_Routine = {3, 23, 15, 7, 43, 7, 15, 23, 3, 3, 23, 15, 7, 43, 7, 15, 23, 3}
+		
+		-- techno
+		StepsType_Techno_Single4 = {5, 31, 31, 5},
+		StepsType_Techno_Single5 = {3, 1, 13, 1, 3},
+		StepsType_Techno_Single8 = {3, 5, 1, 7, 7, 1, 5, 3},
+		StepsType_Techno_Double4 = {5, 7, 7, 5, 5, 7, 7, 5},
+		StepsType_Techno_Double5 = {3, 1, 13, 1, 3, 3, 1, 13, 1, 3},
+		StepsType_Techno_Double8 = {3, 5, 1, 7, 7, 1, 5, 3, 3, 5, 1, 7, 7, 1, 5, 3},
+
+--[[
+Column Color Reference for "key_generic" & "key_thumb":
+	3: Off-White	(beat light, kb7 index/ring, ksmash left hand)
+	7: Midnite Blue	(beat dark)
+	11: Cool Blue	(kb7 middle, ksmash right hand)
+	15: Purple	(ksmash both)
+	19: Goldenrod	(kb7 thumb)
+	23: Pop'n Red
+	27: Pop'n Blue
+	31: Pop'n Green
+	35: Pop'n Yellow
+	39: Pop'n White
+	43: Reserved - Reflex Charcoal
+	47: Reserved - Reflex Green
+	51: Reserved - Reflex Charcoal
+	55: Reserved - Reflex Green
+	59: Reserved - Reflex Charcoal
+	63: Reserved - Reflex Green
+	]]		
+		-- kb7
+		StepsType_Kb7_Single = {3, 11, 3, 19, 3, 11, 3},
+		
+		-- beat: "scratch" has only one functional color at 63, although 51/55/59 have DJ Hero colors (here's hoping)
+		StepsType_Beat_Single5 = {63, 3, 7, 3, 7, 3},
+		StepsType_Beat_Versus5 = {63, 3, 7, 3, 7, 3},
+		StepsType_Beat_Double5 = {63, 3, 7, 3, 7, 3, 3, 7, 3, 7, 3, 63},
+		StepsType_Beat_Single7 = {63, 3, 7, 3, 7, 3, 7, 3},
+		StepsType_Beat_Versus7 = {63, 3, 7, 3, 7, 3, 7, 3},
+		StepsType_Beat_Double7 = {63, 3, 7, 3, 7, 3, 7, 3, 3, 7, 3, 7, 3, 7, 3, 63},
+
+		-- bm: alias for beat
+		StepsType_Bm_Single5 = {63, 3, 7, 3, 7, 3},
+		StepsType_Bm_Versus5 = {63, 3, 7, 3, 7, 3},
+		StepsType_Bm_Double5 = {63, 3, 7, 3, 7, 3, 3, 7, 3, 7, 3, 63},
+		StepsType_Bm_Single7 = {63, 3, 7, 3, 7, 3, 7, 3},
+		StepsType_Bm_Versus7 = {63, 3, 7, 3, 7, 3, 7, 3},
+		StepsType_Bm_Double7 = {63, 3, 7, 3, 7, 3, 7, 3, 3, 7, 3, 7, 3, 7, 3, 63},
+
+		-- maniax: magenta/azure
+		StepsType_Maniax_Single = {3, 7, 7, 3},
+		StepsType_Maniax_Double = {3, 7, 7, 3, 3, 7, 7, 3},
+
+-- *** KAI LEAVES ***
+		
+		-- popn
+		StepsType_Popn_Five = {5, 3, 1, 3, 5},
+		StepsType_Popn_Nine = {17, 7, 5, 3, 1, 3, 5, 7, 17},
+
+		-- pnm: alias for popn
+		StepsType_Pnm_Five = {5, 3, 1, 3, 5},
+		StepsType_Pnm_Nine = {17, 7, 5, 3, 1, 3, 5, 7, 17},
+
+		-- lights: is not game
+		StepsType_Lights_Cabinet = {1, 1, 1, 1, 1, 1, 1, 1},
+
+		-- kickbox
+		StepsType_Kickbox_Human = {7, 7, 7, 7},
+		StepsType_Kickbox_Quadarm = {1, 3, 3, 1},
+		StepsType_Kickbox_Insect = {7, 1, 3, 3, 1, 7},
+		StepsType_Kickbox_Arachnid = {3, 1, 1, 3, 3, 1, 1, 3},
+	};
+
+	setmetatable(columnColorList, {
+		__index = function(table, key, value)
+			return {};
+		end
+	});
 
 
 	local mineZoomList = {
@@ -541,6 +681,8 @@ return function(button_list, stepstype, skin_parameters)
 			return 1;
 		end
 	});
+
+-- *** KAI COMES BACK ***
 
 	local tapState = {
 		parts_per_beat = 5040,				-- fucking ridiculous
@@ -581,17 +723,19 @@ return function(button_list, stepstype, skin_parameters)
 		};
 	end]]
 
-	local mineState = {
-		parts_per_beat = 1, quanta = {{per_beat = 1, states = {1}}}
+	local mineState = {										-- Note to self: learn how to control quantized mines
+		parts_per_beat = 1,									-- Mines need to respond to a "variant" skin parameter, to toggle quantization of mines.
+		quanta = {{per_beat = 1, states = {1}}}				--[[ They also need to respond to the "new_quants" parameter, 
+															so that they use the quantization mode that the user has specified.]]
 	};
 
 	local liftState = DeepCopy(tapState)
-	for i, quanta in ipairs(liftState.quanta) do				--[[ Is this right for pointing to Lift States
+	for i, quanta in ipairs(liftState.quanta) do				--[[ Is the right way of pointing to Lift States
 																that are one up from the tap states?]]
 		quanta.states[1]= quanta.states[1] + 1
 	end
 
-	local activeState = {
+	local activeState = {												-- Don't think I'll use quantized holds/rolls
 		parts_per_beat = 1, quanta = {{per_beat = 1, states = {1}}}
 	};
 
@@ -599,6 +743,8 @@ return function(button_list, stepstype, skin_parameters)
 		parts_per_beat = 1, quanta = {{per_beat = 1, states = {3}}}
 	};
 
+-- *** KAI LEAVES ***
+	
 	local columns = {};
 	for i, button in ipairs(button_list) do
 		local noteType = skin_parameters and skin_parameters.note_type or "Normal";
