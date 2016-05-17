@@ -10,17 +10,17 @@ local skin_name = Var("skin_name");
 return function(button_list, stepstype, skin_parameters)
 	local tapList = {
 		-- Dance, Pump, Techno
-		["Up"]			= {image = "tap ortho arrow", rotZ = 180, rotY = 0},	-- from down
-		["Down"]		= {image = "tap ortho arrow", rotZ = 0, rotY = 0},
-		["Left"]		= {image = "tap ortho arrow", rotZ = 90, rotY = 0},
-		["Right"]		= {image = "tap ortho arrow", rotZ = 270, rotY = 0},
-		["UpLeft"]		= {image = "tap diag arrow", rotZ = 0, rotY = 0},	-- from upleft
-		["UpRight"]		= {image = "tap diag arrow", rotZ = 90, rotY = 0},
+		["Up"]		= {image = "tap ortho arrow", rotZ = 180, rotY = 0},	-- from down
+		["Down"]	= {image = "tap ortho arrow", rotZ = 0, rotY = 0},
+		["Left"]	= {image = "tap ortho arrow", rotZ = 90, rotY = 0},
+		["Right"]	= {image = "tap ortho arrow", rotZ = 270, rotY = 0},
+		["UpLeft"]	= {image = "tap diag arrow", rotZ = 0, rotY = 0},	-- from upleft
+		["UpRight"]	= {image = "tap diag arrow", rotZ = 90, rotY = 0},
 		["DownLeft"]	= {image = "tap diag arrow", rotZ = 270, rotY = 0},
 		["DownRight"] 	= {image = "tap diag arrow", rotZ = 180, rotY = 0},
 		["Center"]    	= {image = "tap center", rotZ = 0, rotY = 0},
 		-- Para (plus future 2-level para mode, maybe)
-		["ParaUp"]		= {image = "para forward", rotZ = 0, rotY = 0},
+		["ParaUp"]	= {image = "para forward", rotZ = 0, rotY = 0},
 		["ParaLeft"]	= {image = "para sides", rotZ = 0, rotY = 0},		-- from left
 		["ParaRight"]	= {image = "para forward", rotZ = 180, rotY = 0},
 		["ParaUpLeft"]	= {image = "para diag", rotZ = 0, rotY = 0},		-- from upleft
@@ -59,18 +59,18 @@ return function(button_list, stepstype, skin_parameters)
 		["HandLrLeft"]		= {image = "hand circle", rotZ = 0, rotY = 0},
 		["HandLrRight"]		= {image = "hand circle", rotZ = 0, rotY = 0},
 		-- kb7, beat
-		["Key1"]			= {image = "key generic", rotZ = 0, rotY = 0},
+		["Key1"]		= {image = "key generic", rotZ = 0, rotY = 0},
 		["Key2"]        	= {image = "key generic", rotZ = 0, rotY = 0},
-		["Key3"]			= {image = "key generic", rotZ = 0, rotY = 0},
+		["Key3"]		= {image = "key generic", rotZ = 0, rotY = 0},
 		if stepstype == "StepsType_Kb7_Single" then							-- update for ksmash
 			["Key4"]		= {image = "key thumb", rotZ = 0, rotY = 0},
 		else	
 			["Key4"]		= {image = "key generic", rotZ = 0, rotY = 0},
 		end
-		["Key5"]			= {image = "key generic", rotZ = 0, rotY = 0},
-		["Key6"]			= {image = "key generic", rotZ = 0, rotY = 0},
-		["Key7"]			= {image = "key generic", rotZ = 0, rotY = 0},
-		["Scratch"]			= {image = "scratch generic", rotZ = 0, rotY = 0},
+		["Key5"]		= {image = "key generic", rotZ = 0, rotY = 0},
+		["Key6"]		= {image = "key generic", rotZ = 0, rotY = 0},
+		["Key7"]		= {image = "key generic", rotZ = 0, rotY = 0},
+		["Scratch"]		= {image = "scratch generic", rotZ = 0, rotY = 0},
 		["Scratch up"]		= {image = "scratch up", rotZ = 0, rotY = 0},
 		["Scratch down"]	= {image = "scratch down", rotZ = 0, rotY = 0},
 		-- popn
@@ -78,7 +78,7 @@ return function(button_list, stepstype, skin_parameters)
 		["Left Yellow"]		= {image = "square", rotZ = 0, rotY = 0},
 		["Left Green"]		= {image = "square", rotZ = 0, rotY = 0},
 		["Left Blue"]		= {image = "square", rotZ = 0, rotY = 0},
-		["Red"]				= {image = "square", rotZ = 0, rotY = 0},
+		["Red"]			= {image = "square", rotZ = 0, rotY = 0},
 		["Right Blue"]		= {image = "square", rotZ = 0, rotY = 0},
 		["Right Green"]		= {image = "square", rotZ = 0, rotY = 0},
 		["Right Yellow"]	= {image = "square", rotZ = 0, rotY = 0},
