@@ -10,8 +10,8 @@
 								Want a darkening effect instead of coloring, but not sure how to pull it off at present.]]
 		},
 	},
-	skin_parameter_info = {				-- Todo: add "variant" parameters for different modes. This will be the hardest by far.
-		
+	skin_parameter_info = {					--[[ Todo: add "variant" parameters for the different modes.
+								This will be the hardest task within this file.]]
 		receptors = {
 			translation = {
 				en = {title = "Receptors", explanation = "Options for receptor effects."},
