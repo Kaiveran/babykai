@@ -44,12 +44,12 @@ return function(button_list, stepstype, skin_parameters)
 		["FootDownLeft"]	= {image = "tap diag arrow", rotZ = 270, rotY = 0},
 		["FootDownRight"]	= {image = "tap diag arrow", rotZ = 180, rotY = 0},
 	--	["FootCenter"]		= {image = "tap center", rotZ = 0, rotY = 0}
-		["HandUp"]			= {image = "hand chevron", rotZ = 0, rotY = 0}, 	-- all from up
+		["HandUp"]		= {image = "hand chevron", rotZ = 0, rotY = 0}, 	-- all from up
 		["HandDown"]		= {image = "hand chevron", rotZ = 180, rotY = 0},
 		["HandLeft"]		= {image = "hand chevron", rotZ = 270, rotY = 0},
 		["HandRight"]		= {image = "hand chevron", rotZ = 90, rotY = 0},
 	--[[	eventual dss notes to be multiplexed with ds3ddx
-		["HandUp"]			= {image = "hand neobloc vert", rotZ = 0, rotY = 0}
+		["HandUp"]		= {image = "hand neobloc vert", rotZ = 0, rotY = 0}
 		["HandDown"]		= {image = "hand neobloc vert", rotZ = 180, rotY = 0}
 		["HandLeft"]		= {image = "hand neobloc horiz", rotZ = 0, rotY = 0}
 		["HandRight"]		= {image = "hand neobloc horiz", rotZ = 180, rotY = 0}
