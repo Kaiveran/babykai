@@ -542,7 +542,7 @@ Column Color Reference for "tap_xxx_arrow":
 		StepsType_Dance_Threepanel = {7, 3, 7},
 		StepsType_Dance_Routine = {11, 3, 3, 11, 11, 3, 3, 11},
 
-		-- pump: tap_center has only yellow at 43.
+		-- pump: tap_center has only gold at 43, and dss yellow at 39.
 		StepsType_Pump_Single = {23, 15, 43, 15, 23},
 		StepsType_Pump_Halfdouble = {43, 15, 23, 23, 15, 43},
 		StepsType_Pump_Double = {23, 15, 43, 15, 23, 23, 15, 43, 15, 23},
@@ -565,9 +565,9 @@ Column Color Reference for "tap_xxx_arrow":
 		StepsType_Ds3ddx_Single = {3, 23, 15, 7, 7, 15, 23, 3},
 		
 		-- dss: i'll deal with you later.
---		StepsType_DSS_Single = {3, 23, 15, 7, 43, 7, 15, 23, 3},
---		StepsType_DSS_Double = {3, 23, 15, 7, 43, 7, 15, 23, 3, 3, 23, 15, 7, 43, 7, 15, 23, 3}
---		StepsType_DSS_Routine = {3, 23, 15, 7, 43, 7, 15, 23, 3, 3, 23, 15, 7, 43, 7, 15, 23, 3}
+--		StepsType_DSS_Single = {3, 23, 15, 7, 39, 7, 15, 23, 3},
+--		StepsType_DSS_Double = {3, 23, 15, 7, 39, 7, 15, 23, 3, 3, 23, 15, 7, 39, 7, 15, 23, 3}
+--		StepsType_DSS_Routine = {3, 23, 15, 7, 39, 7, 15, 23, 3, 3, 23, 15, 7, 39, 7, 15, 23, 3}
 		
 		-- techno
 		StepsType_Techno_Single4 = {5, 31, 31, 5},
