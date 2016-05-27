@@ -10,21 +10,21 @@ local skin_name = Var("skin_name");
 return function(button_list, stepstype, skin_parameters)
 	local tapList = {
 		-- Dance, Pump, Techno
-		["Up"]		= {image = "tap ortho arrow", rotZ = 180, rotY = 0},	-- from down
-		["Down"]	= {image = "tap ortho arrow", rotZ = 0, rotY = 0},
-		["Left"]	= {image = "tap ortho arrow", rotZ = 90, rotY = 0},
-		["Right"]	= {image = "tap ortho arrow", rotZ = 270, rotY = 0},
-		["UpLeft"]	= {image = "tap diag arrow", rotZ = 0, rotY = 0},	-- from upleft
-		["UpRight"]	= {image = "tap diag arrow", rotZ = 90, rotY = 0},
-		["DownLeft"]	= {image = "tap diag arrow", rotZ = 270, rotY = 0},
-		["DownRight"] 	= {image = "tap diag arrow", rotZ = 180, rotY = 0},
-		["Center"]    	= {image = "tap center", rotZ = 0, rotY = 0},
+		["Up"]		= {image = "step ortho", rotZ = 180, rotY = 0},	-- from down
+		["Down"]	= {image = "step ortho", rotZ = 0, rotY = 0},
+		["Left"]	= {image = "step ortho", rotZ = 90, rotY = 0},
+		["Right"]	= {image = "step ortho", rotZ = 270, rotY = 0},
+		["UpLeft"]	= {image = "step diag", rotZ = 0, rotY = 0},	-- from upleft
+		["UpRight"]	= {image = "step diag", rotZ = 90, rotY = 0},
+		["DownLeft"]	= {image = "step diag", rotZ = 270, rotY = 0},
+		["DownRight"] 	= {image = "step diag", rotZ = 180, rotY = 0},
+		["Center"]    	= {image = "step center", rotZ = 0, rotY = 0},
 		-- Para (plus future 2-level para mode, maybe)
-		["ParaUp"]	= {image = "para forward", rotZ = 0, rotY = 0},
-		["ParaLeft"]	= {image = "para sides", rotZ = 0, rotY = 0},		-- from left
-		["ParaRight"]	= {image = "para forward", rotZ = 180, rotY = 0},
-		["ParaUpLeft"]	= {image = "para diag", rotZ = 0, rotY = 0},		-- from upleft
-		["ParaUpRight"]	= {image = "para diag", rotZ = 90, rotY = 0},
+		["ParaUp"]	= {image = "hand para vert", rotZ = 0, rotY = 0},
+		["ParaLeft"]	= {image = "hand para horiz", rotZ = 0, rotY = 0},		-- from left
+		["ParaRight"]	= {image = "hand para vert", rotZ = 180, rotY = 0},
+		["ParaUpLeft"]	= {image = "hand para upperdiag", rotZ = 0, rotY = 0},		-- from upleft
+		["ParaUpRight"]	= {image = "hand para upperdiag", rotZ = 90, rotY = 0},
 	--[[
 		["ParaL1Up"]		= {image = "2para petal", rotZ = 0, rotY = 0},   -- from down
 		["ParaL1Left"]		= {image = "2para petal", rotZ = 60, rotY = 0}
@@ -38,12 +38,12 @@ return function(button_list, stepstype, skin_parameters)
 		["ParaL2UpRight"]	= {image = "2para petal", rotZ = 210, rotY = 0}
 	]]	
 		-- ez2, ds3ddx (dss eventually)
-		["FootDown"]		= {image = "tap ortho arrow", rotZ = 0, rotY = 0},
-		["FootUpLeft"]		= {image = "tap diag arrow", rotZ = 0, rotY = 0},
-		["FootUpRight"]		= {image = "tap diag arrow", rotZ = 90, rotY = 0},
-		["FootDownLeft"]	= {image = "tap diag arrow", rotZ = 270, rotY = 0},
-		["FootDownRight"]	= {image = "tap diag arrow", rotZ = 180, rotY = 0},
-	--	["FootCenter"]		= {image = "tap center", rotZ = 0, rotY = 0}
+		["FootDown"]		= {image = "step ortho", rotZ = 0, rotY = 0},
+		["FootUpLeft"]		= {image = "step diag", rotZ = 0, rotY = 0},
+		["FootUpRight"]		= {image = "step diag", rotZ = 90, rotY = 0},
+		["FootDownLeft"]	= {image = "step diag", rotZ = 270, rotY = 0},
+		["FootDownRight"]	= {image = "step diag", rotZ = 180, rotY = 0},
+	--	["FootCenter"]		= {image = "step center", rotZ = 0, rotY = 0}
 		["HandUp"]		= {image = "hand chevron", rotZ = 0, rotY = 0}, 	-- all from up
 		["HandDown"]		= {image = "hand chevron", rotZ = 180, rotY = 0},
 		["HandLeft"]		= {image = "hand chevron", rotZ = 270, rotY = 0},
@@ -84,18 +84,18 @@ return function(button_list, stepstype, skin_parameters)
 		["Right Yellow"]	= {image = "square", rotZ = 0, rotY = 0},
 		["Right White"]		= {image = "square", rotZ = 0, rotY = 0},
 		-- kickbox
-		["DownLeftFoot"]	= {image = "rightfoot", rotZ = 0, rotY = 180}, -- Down: blue
-		["LeftFoot"]		= {image = "rightfoot", rotZ = 0, rotY = 180}, -- Any:  yellow
-		["UpLeftFoot"]		= {image = "rightfoot", rotZ = 0, rotY = 180}, -- Up:   red
-		["UpLeftFist"]		= {image = "rightfist", rotZ = 0, rotY = 180},
-		["LeftFist"]		= {image = "rightfist", rotZ = 0, rotY = 180},
-		["DownLeftFist"]	= {image = "rightfist", rotZ = 0, rotY = 180},
-		["DownRightFist"]	= {image = "rightfist", rotZ = 0, rotY = 0},
-		["RightFist"]		= {image = "rightfist", rotZ = 0, rotY = 0},
-		["UpRightFist"]		= {image = "rightfist", rotZ = 0, rotY = 0},
-		["UpRightFoot"]		= {image = "rightfoot", rotZ = 0, rotY = 0},
-		["RightFoot"]		= {image = "rightfoot", rotZ = 0, rotY = 0},
-		["DownRightFoot"]	= {image = "rightfoot", rotZ = 0, rotY = 0},
+		["DownLeftFoot"]	= {image = "kick", rotZ = 0, rotY = 180}, -- Down: blue
+		["LeftFoot"]		= {image = "kick", rotZ = 0, rotY = 180}, -- Any:  yellow
+		["UpLeftFoot"]		= {image = "kick", rotZ = 0, rotY = 180}, -- Up:   red
+		["UpLeftFist"]		= {image = "punch", rotZ = 0, rotY = 180},
+		["LeftFist"]		= {image = "punch", rotZ = 0, rotY = 180},
+		["DownLeftFist"]	= {image = "punch", rotZ = 0, rotY = 180},
+		["DownRightFist"]	= {image = "punch", rotZ = 0, rotY = 0},
+		["RightFist"]		= {image = "punch", rotZ = 0, rotY = 0},
+		["UpRightFist"]		= {image = "punch", rotZ = 0, rotY = 0},
+		["UpRightFoot"]		= {image = "kick", rotZ = 0, rotY = 0},
+		["RightFoot"]		= {image = "kick", rotZ = 0, rotY = 0},
+		["DownRightFoot"]	= {image = "kick", rotZ = 0, rotY = 0},
 	};
 
 	-- *** KAI LEAVES ***
@@ -159,18 +159,18 @@ return function(button_list, stepstype, skin_parameters)
 		["Right Yellow"] = {image = "square", flip = "TexCoordFlipMode_None"},
 		["Right White"]  = {image = "square", flip = "TexCoordFlipMode_None"},
 		-- kickbox
-		["DownLeftFoot"]  = {image = "rightfoot", flip = "TexCoordFlipMode_X"},
-		["LeftFoot"]      = {image = "rightfoot", flip = "TexCoordFlipMode_X"},
-		["UpLeftFoot"]    = {image = "rightfoot", flip = "TexCoordFlipMode_X"},
-		["UpLeftFist"]    = {image = "rightfist", flip = "TexCoordFlipMode_X"},
-		["LeftFist"]      = {image = "rightfist", flip = "TexCoordFlipMode_X"},
-		["DownLeftFist"]  = {image = "rightfist", flip = "TexCoordFlipMode_X"},
-		["DownRightFist"] = {image = "rightfist", flip = "TexCoordFlipMode_None"},
-		["RightFist"]     = {image = "rightfist", flip = "TexCoordFlipMode_None"},
-		["UpRightFist"]   = {image = "rightfist", flip = "TexCoordFlipMode_None"},
-		["UpRightFoot"]   = {image = "rightfoot", flip = "TexCoordFlipMode_None"},
-		["RightFoot"]     = {image = "rightfoot", flip = "TexCoordFlipMode_None"},
-		["DownRightFoot"] = {image = "rightfoot", flip = "TexCoordFlipMode_None"},
+		["DownLeftFoot"]  = {image = "kick", flip = "TexCoordFlipMode_X"},
+		["LeftFoot"]      = {image = "kick", flip = "TexCoordFlipMode_X"},
+		["UpLeftFoot"]    = {image = "kick", flip = "TexCoordFlipMode_X"},
+		["UpLeftFist"]    = {image = "punch", flip = "TexCoordFlipMode_X"},
+		["LeftFist"]      = {image = "punch", flip = "TexCoordFlipMode_X"},
+		["DownLeftFist"]  = {image = "punch", flip = "TexCoordFlipMode_X"},
+		["DownRightFist"] = {image = "punch", flip = "TexCoordFlipMode_None"},
+		["RightFist"]     = {image = "punch", flip = "TexCoordFlipMode_None"},
+		["UpRightFist"]   = {image = "punch", flip = "TexCoordFlipMode_None"},
+		["UpRightFoot"]   = {image = "kick", flip = "TexCoordFlipMode_None"},
+		["RightFoot"]     = {image = "kick", flip = "TexCoordFlipMode_None"},
+		["DownRightFoot"] = {image = "kick", flip = "TexCoordFlipMode_None"},
 	};
 
 	setmetatable(holdList, {
@@ -232,18 +232,18 @@ return function(button_list, stepstype, skin_parameters)
 		["Right Yellow"] = {image = "square", flip = "TexCoordFlipMode_Y"},
 		["Right White"]  = {image = "square", flip = "TexCoordFlipMode_Y"},
 		-- kickbox
-		["DownLeftFoot"]  = {image = "rightfoot", flip = "TexCoordFlipMode_XY"},
-		["LeftFoot"]      = {image = "rightfoot", flip = "TexCoordFlipMode_XY"},
-		["UpLeftFoot"]    = {image = "rightfoot", flip = "TexCoordFlipMode_XY"},
-		["UpLeftFist"]    = {image = "rightfist", flip = "TexCoordFlipMode_XY"},
-		["LeftFist"]      = {image = "rightfist", flip = "TexCoordFlipMode_XY"},
-		["DownLeftFist"]  = {image = "rightfist", flip = "TexCoordFlipMode_XY"},
-		["DownRightFist"] = {image = "rightfist", flip = "TexCoordFlipMode_Y"},
-		["RightFist"]     = {image = "rightfist", flip = "TexCoordFlipMode_Y"},
-		["UpRightFist"]   = {image = "rightfist", flip = "TexCoordFlipMode_Y"},
-		["UpRightFoot"]   = {image = "rightfoot", flip = "TexCoordFlipMode_Y"},
-		["RightFoot"]     = {image = "rightfoot", flip = "TexCoordFlipMode_Y"},
-		["DownRightFoot"] = {image = "rightfoot", flip = "TexCoordFlipMode_Y"},
+		["DownLeftFoot"]  = {image = "kick", flip = "TexCoordFlipMode_XY"},
+		["LeftFoot"]      = {image = "kick", flip = "TexCoordFlipMode_XY"},
+		["UpLeftFoot"]    = {image = "kick", flip = "TexCoordFlipMode_XY"},
+		["UpLeftFist"]    = {image = "punch", flip = "TexCoordFlipMode_XY"},
+		["LeftFist"]      = {image = "punch", flip = "TexCoordFlipMode_XY"},
+		["DownLeftFist"]  = {image = "punch", flip = "TexCoordFlipMode_XY"},
+		["DownRightFist"] = {image = "punch", flip = "TexCoordFlipMode_Y"},
+		["RightFist"]     = {image = "punch", flip = "TexCoordFlipMode_Y"},
+		["UpRightFist"]   = {image = "punch", flip = "TexCoordFlipMode_Y"},
+		["UpRightFoot"]   = {image = "kick", flip = "TexCoordFlipMode_Y"},
+		["RightFoot"]     = {image = "kick", flip = "TexCoordFlipMode_Y"},
+		["DownRightFoot"] = {image = "kick", flip = "TexCoordFlipMode_Y"},
 	};
 
 	setmetatable(reverseHoldList, {
@@ -305,18 +305,18 @@ return function(button_list, stepstype, skin_parameters)
 		["Right Yellow"] = {image = "square", flip = "TexCoordFlipMode_None"},
 		["Right White"]  = {image = "square", flip = "TexCoordFlipMode_None"},
 		-- kickbox
-		["DownLeftFoot"]  = {image = "rightfoot", flip = "TexCoordFlipMode_X"},
-		["LeftFoot"]      = {image = "rightfoot", flip = "TexCoordFlipMode_X"},
-		["UpLeftFoot"]    = {image = "rightfoot", flip = "TexCoordFlipMode_X"},
-		["UpLeftFist"]    = {image = "rightfist", flip = "TexCoordFlipMode_X"},
-		["LeftFist"]      = {image = "rightfist", flip = "TexCoordFlipMode_X"},
-		["DownLeftFist"]  = {image = "rightfist", flip = "TexCoordFlipMode_X"},
-		["DownRightFist"] = {image = "rightfist", flip = "TexCoordFlipMode_None"},
-		["RightFist"]     = {image = "rightfist", flip = "TexCoordFlipMode_None"},
-		["UpRightFist"]   = {image = "rightfist", flip = "TexCoordFlipMode_None"},
-		["UpRightFoot"]   = {image = "rightfoot", flip = "TexCoordFlipMode_None"},
-		["RightFoot"]     = {image = "rightfoot", flip = "TexCoordFlipMode_None"},
-		["DownRightFoot"] = {image = "rightfoot", flip = "TexCoordFlipMode_None"},
+		["DownLeftFoot"]  = {image = "kick", flip = "TexCoordFlipMode_X"},
+		["LeftFoot"]      = {image = "kick", flip = "TexCoordFlipMode_X"},
+		["UpLeftFoot"]    = {image = "kick", flip = "TexCoordFlipMode_X"},
+		["UpLeftFist"]    = {image = "punch", flip = "TexCoordFlipMode_X"},
+		["LeftFist"]      = {image = "punch", flip = "TexCoordFlipMode_X"},
+		["DownLeftFist"]  = {image = "punch", flip = "TexCoordFlipMode_X"},
+		["DownRightFist"] = {image = "punch", flip = "TexCoordFlipMode_None"},
+		["RightFist"]     = {image = "punch", flip = "TexCoordFlipMode_None"},
+		["UpRightFist"]   = {image = "punch", flip = "TexCoordFlipMode_None"},
+		["UpRightFoot"]   = {image = "kick", flip = "TexCoordFlipMode_None"},
+		["RightFoot"]     = {image = "kick", flip = "TexCoordFlipMode_None"},
+		["DownRightFoot"] = {image = "kick", flip = "TexCoordFlipMode_None"},
 	};
 
 	setmetatable(rollList, {
@@ -378,18 +378,18 @@ return function(button_list, stepstype, skin_parameters)
 		["Right Yellow"] = {image = "square", flip = "TexCoordFlipMode_None"},
 		["Right White"]  = {image = "square", flip = "TexCoordFlipMode_None"},
 		-- kickbox
-		["DownLeftFoot"]  = {image = "reverserightfoot", flip = "TexCoordFlipMode_X"},
-		["LeftFoot"]      = {image = "reverserightfoot", flip = "TexCoordFlipMode_X"},
-		["UpLeftFoot"]    = {image = "reverserightfoot", flip = "TexCoordFlipMode_X"},
-		["UpLeftFist"]    = {image = "reverserightfist", flip = "TexCoordFlipMode_X"},
-		["LeftFist"]      = {image = "reverserightfist", flip = "TexCoordFlipMode_X"},
-		["DownLeftFist"]  = {image = "reverserightfist", flip = "TexCoordFlipMode_X"},
-		["DownRightFist"] = {image = "reverserightfist", flip = "TexCoordFlipMode_None"},
-		["RightFist"]     = {image = "reverserightfist", flip = "TexCoordFlipMode_None"},
-		["UpRightFist"]   = {image = "reverserightfist", flip = "TexCoordFlipMode_None"},
-		["UpRightFoot"]   = {image = "reverserightfoot", flip = "TexCoordFlipMode_None"},
-		["RightFoot"]     = {image = "reverserightfoot", flip = "TexCoordFlipMode_None"},
-		["DownRightFoot"] = {image = "reverserightfoot", flip = "TexCoordFlipMode_None"},
+		["DownLeftFoot"]  = {image = "reversekick", flip = "TexCoordFlipMode_X"},
+		["LeftFoot"]      = {image = "reversekick", flip = "TexCoordFlipMode_X"},
+		["UpLeftFoot"]    = {image = "reversekick", flip = "TexCoordFlipMode_X"},
+		["UpLeftFist"]    = {image = "reversepunch", flip = "TexCoordFlipMode_X"},
+		["LeftFist"]      = {image = "reversepunch", flip = "TexCoordFlipMode_X"},
+		["DownLeftFist"]  = {image = "reversepunch", flip = "TexCoordFlipMode_X"},
+		["DownRightFist"] = {image = "reversepunch", flip = "TexCoordFlipMode_None"},
+		["RightFist"]     = {image = "reversepunch", flip = "TexCoordFlipMode_None"},
+		["UpRightFist"]   = {image = "reversepunch", flip = "TexCoordFlipMode_None"},
+		["UpRightFoot"]   = {image = "reversekick", flip = "TexCoordFlipMode_None"},
+		["RightFoot"]     = {image = "reversekick", flip = "TexCoordFlipMode_None"},
+		["DownRightFoot"] = {image = "reversekick", flip = "TexCoordFlipMode_None"},
 	};
 
 	setmetatable(reverseRollList, {
