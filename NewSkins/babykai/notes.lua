@@ -97,160 +97,160 @@ return function(button_list, stepstype, skin_parameters)
 		["RightFoot"]		= {image = "kick", rotZ = 0, rotY = 0},
 		["DownRightFoot"]	= {image = "kick", rotZ = 0, rotY = 0},
 	};
-
-	-- *** KAI LEAVES ***
 	
 	setmetatable(tapList, {
 		__index = function(table, key, value)
-			return {image = "fallback", rotZ = 0, rotY = 0};
+			return {image = "tl fallback", rotZ = 0, rotY = 0};
 		end
 	});
 
 	local holdList = {
 		-- Dance, Pump, Techno
-		["Up"]        = {image = "down", flip = "TexCoordFlipMode_Y"},
-		["Down"]      = {image = "down", flip = "TexCoordFlipMode_None"},
-		["Left"]      = {image = "left", flip = "TexCoordFlipMode_None"},
-		["Right"]     = {image = "left", flip = "TexCoordFlipMode_X"},
-		["UpLeft"]    = {image = "upleft", flip = "TexCoordFlipMode_None"},
-		["UpRight"]   = {image = "upleft", flip = "TexCoordFlipMode_X"},
-		["DownLeft"]  = {image = "upleft", flip = "TexCoordFlipMode_Y"},
-		["DownRight"] = {image = "upleft", flip = "TexCoordFlipMode_XY"},
-		["Center"]    = {image = "center", flip = "TexCoordFlipMode_None"},
+		["Up"]        = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Down"]      = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Left"]      = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Right"]     = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["UpLeft"]    = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["UpRight"]   = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["DownLeft"]  = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["DownRight"] = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Center"]    = {image = "hold gen", flip = "TexCoordFlipMode_None"},
 		-- Para
-		["ParaUp"]      = {image = "paraup", flip = "TexCoordFlipMode_None"},
-		["ParaLeft"]    = {image = "paraleft", flip = "TexCoordFlipMode_None"},
-		["ParaRight"]   = {image = "paraleft", flip = "TexCoordFlipMode_X"},
-		["ParaUpLeft"]  = {image = "paraupleft", flip = "TexCoordFlipMode_None"},
-		["ParaUpRight"] = {image = "paraupleft", flip = "TexCoordFlipMode_X"},
+		["ParaUp"]      = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["ParaLeft"]    = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["ParaRight"]   = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["ParaUpLeft"]  = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["ParaUpRight"] = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
 		-- ez2, ds3ddx
-		["FootDown"]      = {image = "down", flip = "TexCoordFlipMode_None"},
-		["FootUpLeft"]    = {image = "upleft", flip = "TexCoordFlipMode_None"},
-		["FootUpRight"]   = {image = "upleft", flip = "TexCoordFlipMode_X"},
-		["FootDownLeft"]  = {image = "upleft", flip = "TexCoordFlipMode_Y"},
-		["FootDownRight"] = {image = "upleft", flip = "TexCoordFlipMode_XY"},
-		["HandUp"]        = {image = "handdown", flip = "TexCoordFlipMode_Y"},
-		["HandDown"]      = {image = "handdown", flip = "TexCoordFlipMode_None"},
-		["HandLeft"]      = {image = "handleft", flip = "TexCoordFlipMode_None"},
-		["HandRight"]     = {image = "handleft", flip = "TexCoordFlipMode_X"},
-		["HandUpLeft"]    = {image = "circle", flip = "TexCoordFlipMode_None"},
-		["HandUpRight"]   = {image = "circle", flip = "TexCoordFlipMode_None"},
-		["HandLrLeft"]    = {image = "circle", flip = "TexCoordFlipMode_None"},
-		["HandLrRight"]   = {image = "circle", flip = "TexCoordFlipMode_None"},
+		["FootDown"]      = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["FootUpLeft"]    = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["FootUpRight"]   = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["FootDownLeft"]  = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["FootDownRight"] = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["HandUp"]        = {image = "hold split", flip = "TexCoordFlipMode_None"},
+		["HandDown"]      = {image = "hold split", flip = "TexCoordFlipMode_Y"},
+		["HandLeft"]      = {image = "hold half", flip = "TexCoordFlipMode_None"},
+		["HandRight"]     = {image = "hold half", flip = "TexCoordFlipMode_X"},
+		["HandUpLeft"]    = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["HandUpRight"]   = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["HandLrLeft"]    = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["HandLrRight"]   = {image = "hold gen", flip = "TexCoordFlipMode_None"},
 		-- kb7, beat
-		["Key1"]         = {image = "key", flip = "TexCoordFlipMode_None"},
-		["Key2"]         = {image = "key", flip = "TexCoordFlipMode_None"},
-		["Key3"]         = {image = "key", flip = "TexCoordFlipMode_None"},
-		["Key4"]         = {image = "key", flip = "TexCoordFlipMode_None"},
-		["Key5"]         = {image = "key", flip = "TexCoordFlipMode_None"},
-		["Key6"]         = {image = "key", flip = "TexCoordFlipMode_None"},
-		["Key7"]         = {image = "key", flip = "TexCoordFlipMode_None"},
-		["Scratch"]      = {image = "scratch", flip = "TexCoordFlipMode_None"},
-		["Scratch up"]   = {image = "scratch", flip = "TexCoordFlipMode_None"},
-		["Scratch down"] = {image = "scratch", flip = "TexCoordFlipMode_None"},
+		["Key1"]         = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Key2"]         = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Key3"]         = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Key4"]         = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Key5"]         = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Key6"]         = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Key7"]         = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Scratch"]      = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Scratch up"]   = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Scratch down"] = {image = "hold gen", flip = "TexCoordFlipMode_None"},
 		-- popn
-		["Left White"]   = {image = "square", flip = "TexCoordFlipMode_None"},
-		["Left Yellow"]  = {image = "square", flip = "TexCoordFlipMode_None"},
-		["Left Green"]   = {image = "square", flip = "TexCoordFlipMode_None"},
-		["Left Blue"]    = {image = "square", flip = "TexCoordFlipMode_None"},
-		["Red"]          = {image = "square", flip = "TexCoordFlipMode_None"},
-		["Right Blue"]   = {image = "square", flip = "TexCoordFlipMode_None"},
-		["Right Green"]  = {image = "square", flip = "TexCoordFlipMode_None"},
-		["Right Yellow"] = {image = "square", flip = "TexCoordFlipMode_None"},
-		["Right White"]  = {image = "square", flip = "TexCoordFlipMode_None"},
+		["Left White"]   = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Left Yellow"]  = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Left Green"]   = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Left Blue"]    = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Red"]          = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Right Blue"]   = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Right Green"]  = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Right Yellow"] = {image = "hold gen", flip = "TexCoordFlipMode_None"},
+		["Right White"]  = {image = "hold gen", flip = "TexCoordFlipMode_None"},
 		-- kickbox
-		["DownLeftFoot"]  = {image = "kick", flip = "TexCoordFlipMode_X"},
-		["LeftFoot"]      = {image = "kick", flip = "TexCoordFlipMode_X"},
-		["UpLeftFoot"]    = {image = "kick", flip = "TexCoordFlipMode_X"},
-		["UpLeftFist"]    = {image = "punch", flip = "TexCoordFlipMode_X"},
-		["LeftFist"]      = {image = "punch", flip = "TexCoordFlipMode_X"},
-		["DownLeftFist"]  = {image = "punch", flip = "TexCoordFlipMode_X"},
-		["DownRightFist"] = {image = "punch", flip = "TexCoordFlipMode_None"},
-		["RightFist"]     = {image = "punch", flip = "TexCoordFlipMode_None"},
-		["UpRightFist"]   = {image = "punch", flip = "TexCoordFlipMode_None"},
-		["UpRightFoot"]   = {image = "kick", flip = "TexCoordFlipMode_None"},
-		["RightFoot"]     = {image = "kick", flip = "TexCoordFlipMode_None"},
-		["DownRightFoot"] = {image = "kick", flip = "TexCoordFlipMode_None"},
+		["DownLeftFoot"]  = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["LeftFoot"]      = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["UpLeftFoot"]    = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["UpLeftFist"]    = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["LeftFist"]      = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["DownLeftFist"]  = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["DownRightFist"] = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["RightFist"]     = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["UpRightFist"]   = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["UpRightFoot"]   = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["RightFoot"]     = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
+		["DownRightFoot"] = {image = "hold parashaft", flip = "TexCoordFlipMode_None"},
 	};
 
 	setmetatable(holdList, {
 		__index = function(table, key, value)
-			return {image = "fallback", flip = "TexCoordFlipMode_None"};
+			return {image = "hold gen", flip = "TexCoordFlipMode_None"};
 		end
 	});
 
 	local reverseHoldList = {
 		-- Dance, Pump, Techno
-		["Up"]        = {image = "down", flip = "TexCoordFlipMode_None"},
-		["Down"]      = {image = "down", flip = "TexCoordFlipMode_Y"},
-		["Left"]      = {image = "left", flip = "TexCoordFlipMode_Y"},
-		["Right"]     = {image = "left", flip = "TexCoordFlipMode_XY"},
-		["UpLeft"]    = {image = "upleft", flip = "TexCoordFlipMode_Y"},
-		["UpRight"]   = {image = "upleft", flip = "TexCoordFlipMode_XY"},
-		["DownLeft"]  = {image = "upleft", flip = "TexCoordFlipMode_None"},
-		["DownRight"] = {image = "upleft", flip = "TexCoordFlipMode_X"},
-		["Center"]    = {image = "center", flip = "TexCoordFlipMode_Y"},
+		["Up"]        = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Down"]      = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Left"]      = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Right"]     = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["UpLeft"]    = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["UpRight"]   = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["DownLeft"]  = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["DownRight"] = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Center"]    = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
 		-- Para
-		["ParaUp"]      = {image = "paraup", flip = "TexCoordFlipMode_Y"},
-		["ParaLeft"]    = {image = "paraleft", flip = "TexCoordFlipMode_Y"},
-		["ParaRight"]   = {image = "paraleft", flip = "TexCoordFlipMode_XY"},
-		["ParaUpLeft"]  = {image = "paraupleft", flip = "TexCoordFlipMode_Y"},
-		["ParaUpRight"] = {image = "paraupleft", flip = "TexCoordFlipMode_XY"},
+		["ParaUp"]      = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["ParaLeft"]    = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["ParaRight"]   = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["ParaUpLeft"]  = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["ParaUpRight"] = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
 		-- ez2, ds3ddx
-		["FootDown"]      = {image = "down", flip = "TexCoordFlipMode_Y"},
-		["FootUpLeft"]    = {image = "upleft", flip = "TexCoordFlipMode_Y"},
-		["FootUpRight"]   = {image = "upleft", flip = "TexCoordFlipMode_XY"},
-		["FootDownLeft"]  = {image = "upleft", flip = "TexCoordFlipMode_None"},
-		["FootDownRight"] = {image = "upleft", flip = "TexCoordFlipMode_X"},
-		["HandUp"]        = {image = "handdown", flip = "TexCoordFlipMode_None"},
-		["HandDown"]      = {image = "handdown", flip = "TexCoordFlipMode_Y"},
-		["HandLeft"]      = {image = "handleft", flip = "TexCoordFlipMode_Y"},
-		["HandRight"]     = {image = "handleft", flip = "TexCoordFlipMode_XY"},
-		["HandUpLeft"]    = {image = "circle", flip = "TexCoordFlipMode_Y"},
-		["HandUpRight"]   = {image = "circle", flip = "TexCoordFlipMode_Y"},
-		["HandLrLeft"]    = {image = "circle", flip = "TexCoordFlipMode_Y"},
-		["HandLrRight"]   = {image = "circle", flip = "TexCoordFlipMode_Y"},
+		["FootDown"]      = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["FootUpLeft"]    = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["FootUpRight"]   = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["FootDownLeft"]  = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["FootDownRight"] = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["HandUp"]        = {image = "hold split", flip = "TexCoordFlipMode_Y"},
+		["HandDown"]      = {image = "hold split", flip = "TexCoordFlipMode_None"},
+		["HandLeft"]      = {image = "hold half", flip = "TexCoordFlipMode_Y"},
+		["HandRight"]     = {image = "hold half", flip = "TexCoordFlipMode_XY"},
+		["HandUpLeft"]    = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["HandUpRight"]   = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["HandLrLeft"]    = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["HandLrRight"]   = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
 		-- kb7, beat
-		["Key1"]         = {image = "key", flip = "TexCoordFlipMode_Y"},
-		["Key2"]         = {image = "key", flip = "TexCoordFlipMode_Y"},
-		["Key3"]         = {image = "key", flip = "TexCoordFlipMode_Y"},
-		["Key4"]         = {image = "key", flip = "TexCoordFlipMode_Y"},
-		["Key5"]         = {image = "key", flip = "TexCoordFlipMode_Y"},
-		["Key6"]         = {image = "key", flip = "TexCoordFlipMode_Y"},
-		["Key7"]         = {image = "key", flip = "TexCoordFlipMode_Y"},
-		["Scratch"]      = {image = "scratch", flip = "TexCoordFlipMode_Y"},
-		["Scratch up"]   = {image = "scratch", flip = "TexCoordFlipMode_Y"},
-		["Scratch down"] = {image = "scratch", flip = "TexCoordFlipMode_Y"},
+		["Key1"]         = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Key2"]         = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Key3"]         = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Key4"]         = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Key5"]         = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Key6"]         = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Key7"]         = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Scratch"]      = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Scratch up"]   = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Scratch down"] = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
 		-- popn
-		["Left White"]   = {image = "square", flip = "TexCoordFlipMode_Y"},
-		["Left Yellow"]  = {image = "square", flip = "TexCoordFlipMode_Y"},
-		["Left Green"]   = {image = "square", flip = "TexCoordFlipMode_Y"},
-		["Left Blue"]    = {image = "square", flip = "TexCoordFlipMode_Y"},
-		["Red"]          = {image = "square", flip = "TexCoordFlipMode_Y"},
-		["Right Blue"]   = {image = "square", flip = "TexCoordFlipMode_Y"},
-		["Right Green"]  = {image = "square", flip = "TexCoordFlipMode_Y"},
-		["Right Yellow"] = {image = "square", flip = "TexCoordFlipMode_Y"},
-		["Right White"]  = {image = "square", flip = "TexCoordFlipMode_Y"},
+		["Left White"]   = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Left Yellow"]  = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Left Green"]   = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Left Blue"]    = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Red"]          = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Right Blue"]   = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Right Green"]  = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Right Yellow"] = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
+		["Right White"]  = {image = "hold gen", flip = "TexCoordFlipMode_Y"},
 		-- kickbox
-		["DownLeftFoot"]  = {image = "kick", flip = "TexCoordFlipMode_XY"},
-		["LeftFoot"]      = {image = "kick", flip = "TexCoordFlipMode_XY"},
-		["UpLeftFoot"]    = {image = "kick", flip = "TexCoordFlipMode_XY"},
-		["UpLeftFist"]    = {image = "punch", flip = "TexCoordFlipMode_XY"},
-		["LeftFist"]      = {image = "punch", flip = "TexCoordFlipMode_XY"},
-		["DownLeftFist"]  = {image = "punch", flip = "TexCoordFlipMode_XY"},
-		["DownRightFist"] = {image = "punch", flip = "TexCoordFlipMode_Y"},
-		["RightFist"]     = {image = "punch", flip = "TexCoordFlipMode_Y"},
-		["UpRightFist"]   = {image = "punch", flip = "TexCoordFlipMode_Y"},
-		["UpRightFoot"]   = {image = "kick", flip = "TexCoordFlipMode_Y"},
-		["RightFoot"]     = {image = "kick", flip = "TexCoordFlipMode_Y"},
-		["DownRightFoot"] = {image = "kick", flip = "TexCoordFlipMode_Y"},
+		["DownLeftFoot"]  = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["LeftFoot"]      = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["UpLeftFoot"]    = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["UpLeftFist"]    = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["LeftFist"]      = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["DownLeftFist"]  = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["DownRightFist"] = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["RightFist"]     = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["UpRightFist"]   = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["UpRightFoot"]   = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["RightFoot"]     = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
+		["DownRightFoot"] = {image = "hold parashaft", flip = "TexCoordFlipMode_Y"},
 	};
 
 	setmetatable(reverseHoldList, {
 		__index = function(table, key, value)
-			return {image = "fallback", flip = "TexCoordFlipMode_Y"};
+			return {image = "hold gen", flip = "TexCoordFlipMode_Y"};
 		end
 	});
+	
+-- *** KAI LEAVES ***
 
 	local rollList = {
 		-- Dance, Pump, Techno
@@ -398,7 +398,9 @@ return function(button_list, stepstype, skin_parameters)
 		end
 	});
 
-	local columnWidth = {
+-- *** KAI COMES BACK ***
+	
+	local columnWidth = {						-- All based on my graphic examples.
 		-- dance: 64 per column
 		StepsType_Dance_Single = {64, 64, 64, 64},
 		StepsType_Dance_Double = {64, 64, 64, 64, 64, 64, 64, 64},
@@ -407,25 +409,25 @@ return function(button_list, stepstype, skin_parameters)
 		StepsType_Dance_Threepanel = {64, 64, 64},
 		StepsType_Dance_Routine = {64, 64, 64, 64, 64, 64, 64, 64},
 
-		-- pump: 50 per column (2px double margin)
-		StepsType_Pump_Single = {50, 50, 50, 50, 50},
-		StepsType_Pump_Halfdouble = {50, 50, 50, 50, 50, 50},
-		StepsType_Pump_Double = {50, 50, 50, 50, 50, 50, 50, 50, 50, 50},
-		StepsType_Pump_Couple = {50, 50, 50, 50, 50, 50, 50, 50, 50, 50},
-		StepsType_Pump_Routine = {50, 50, 50, 50, 50, 50, 50, 50, 50, 50},
+		-- pump: 52 per column
+		StepsType_Pump_Single = {52, 52, 52, 52, 52},
+		StepsType_Pump_Halfdouble = {52, 52, 52, 52, 52, 52},
+		StepsType_Pump_Double = {52, 52, 52, 52, 52, 52, 52, 52, 52, 52},
+		StepsType_Pump_Couple = {52, 52, 52, 52, 52, 52, 52, 52, 52, 52},
+		StepsType_Pump_Routine = {52, 52, 52, 52, 52, 52, 52, 52, 52, 52},
 
-		-- kb7: 64 per column w/96 thumb key
+		-- kb7: 64 per column w/96 thumb key (have to see how padding looks)
 		StepsType_Kb7_Single = {64, 64, 64, 96, 64, 64, 64},
 
-		-- ez2: inaccurate
-		StepsType_Ez2_Single = {44, 44, 44, 44, 44},
-		StepsType_Ez2_Double = {44, 44, 44, 44, 44, 44, 44, 44, 44, 44},
-		StepsType_Ez2_Real = {44, 44, 44, 44, 44, 44, 44},
+		-- ez2: compressed in Real style
+		StepsType_Ez2_Single = {55, 55, 55, 55, 55},
+		StepsType_Ez2_Double = {55, 55, 55, 55, 55, 55, 55, 55, 55, 55},
+		StepsType_Ez2_Real = {46, 46, 46, 46, 46, 46, 46},
 
 		-- para: 55 per column
 		StepsType_Para_Single = {55, 55, 55, 55, 55},
 
-		-- ds3ddx: inaccurate
+		-- ds3ddx: inaccurate (same as hanubeki, gotta see how this goes)
 		StepsType_Ds3ddx_Single = {36, 44, 44, 40, 40, 44, 44, 36},
 
 		-- beat: scratch = 64, key = 32 (SM5 style)
@@ -444,19 +446,19 @@ return function(button_list, stepstype, skin_parameters)
 		StepsType_Bm_Versus7 = {64, 32, 32, 32, 32, 32, 32, 32},
 		StepsType_Bm_Double7 = {64, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 64},
 
-		-- maniax: 32 per column (4px double margin)
-		StepsType_Maniax_Single = {32, 32, 32, 32},
-		StepsType_Maniax_Double = {32, 32, 32, 32, 32, 32, 32, 32},
+		-- maniax: way off
+		StepsType_Maniax_Single = {50, 50, 50, 50},
+		StepsType_Maniax_Double = {50, 50, 50, 50, 50, 50, 50, 50},
 
-		-- techno: inaccurate
-		StepsType_Techno_Single4 = {70, 70, 70, 70},
+		-- techno: same as hanubeki, except without stretched 4-panel
+		StepsType_Techno_Single4 = {64, 64, 64, 64},
 		StepsType_Techno_Single5 = {56, 56, 56, 56, 56},
 		StepsType_Techno_Single8 = {56, 56, 56, 56, 56, 56, 56, 56},
-		StepsType_Techno_Double4 = {70, 70, 70, 70, 70, 70, 70, 70},
+		StepsType_Techno_Double4 = {64, 64, 64, 64, 64, 64, 64, 64},
 		StepsType_Techno_Double5 = {56, 56, 56, 56, 56, 56, 56, 56, 56, 56},
 		StepsType_Techno_Double8 = {56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56},
 
-		-- popn: not streched in 5buttons
+		-- popn: 32, not stretched in 5-button mode
 		StepsType_Popn_Five = {32, 32, 32, 32, 32}, -- {36, 30, 36, 30, 36}
 		StepsType_Popn_Nine = {32, 32, 32, 32, 32, 32, 32, 32, 32}, -- {36, 30, 36, 30, 36, 30, 36, 30, 36}
 
@@ -479,8 +481,6 @@ return function(button_list, stepstype, skin_parameters)
 			return {};
 		end
 	});
-
--- *** KAI COMES BACK ***
 	
 	local columnPadding = {
 		-- ez2: inaccurate
@@ -542,7 +542,7 @@ Column Color Reference for "tap_xxx_arrow":
 		StepsType_Dance_Threepanel = {7, 3, 7},
 		StepsType_Dance_Routine = {11, 3, 3, 11, 11, 3, 3, 11},
 
-		-- pump: tap_center has only gold at 43, and dss yellow at 39.
+		-- pump: tap_center has dss yellow at 39, pump gold at 43, and techno pink at 47.
 		StepsType_Pump_Single = {23, 15, 43, 15, 23},
 		StepsType_Pump_Halfdouble = {43, 15, 23, 23, 15, 43},
 		StepsType_Pump_Double = {23, 15, 43, 15, 23, 23, 15, 43, 15, 23},
@@ -685,7 +685,7 @@ Column Color Reference for "key_generic" & "key_thumb":
 -- *** KAI COMES BACK ***
 
 	local tapState = {
-		parts_per_beat = 5040,				-- fucking ridiculous
+		parts_per_beat = 5040,				-- fucking ridiculous. hope it doesn't hit a precision limit
 		quanta = {
 			{per_beat = 1, states = {1}},	-- 2nd, Red
 			{per_beat = 2, states = {5}},	-- 4th, Blue
@@ -702,8 +702,8 @@ Column Color Reference for "key_generic" & "key_thumb":
 			{per_beat = 18, states = {49}}, -- 36th, Teal
 			{per_beat = 24, states = {53}}, -- 48th, Fuchsia
 			-- fallbacks are white and gray, which alternate until the noteskin gets back to a "known" quant.
-			-- although, I have to question why I'm still doing that after I made all these weird quants.
-			-- maybe I should make one with the extra quants, and one without.
+			-- They won't see much use after I made all these weird quants, but with "new quants" set to off they might.
+			-- How to implement that, though...
 		},
 	};
 
@@ -834,6 +834,8 @@ Column Color Reference for "key_generic" & "key_thumb":
 			parts_per_beat = 1, quanta = {{per_beat = 1, states = {columnColor}}}
 		}
 
+-- *** KAI COMES BACK ***
+		
 		columns[i] = {
 			-- width = columnWidth[stepstype][i] or 64,
 			-- padding = columnPadding[stepstype][i] or 0,
@@ -841,10 +843,10 @@ Column Color Reference for "key_generic" & "key_thumb":
 			width = baseWidth,
 			padding = computedPadding,
 			quantum_time = 2	-- this makes the quants cover 2 beats, right?
-			hold_gray_percent = .3
+			hold_gray_percent = .25
 			taps = {
 				NewSkinTapPart_Tap = {
-					state_map = (colorType == "Quantize") and tapState or columnState,
+					state_map = tapState or columnState,
 					actor = Def.Sprite {
 						Texture = NEWSKIN:get_path(skin_name, "_" .. tap.image .. "4x16 (quadres).png"),
 						InitCommand = cmd(rotationz,tap.rotZ;rotationy,tap.rotY),
@@ -855,26 +857,16 @@ Column Color Reference for "key_generic" & "key_thumb":
 					actor = Def.ActorFrame {
 						InitCommand = cmd(zoom,mineZoom),
 						Def.Sprite {
-							Texture = NEWSKIN:get_path(skin_name, "_mine 2x16 (doubleres).png"),
-						},
-						Def.Sprite {
-							Texture = NEWSKIN:get_path(skin_name, "_mparts 2x16 (doubleres).png"),
-							InitCommand = cmd(spin;effectclock,"beat";effectmagnitude,0,0,-60),
-						},
-						Def.Sprite {
-							Texture = NEWSKIN:get_path(skin_name, "_mparts 2x16 (doubleres).png"),
-						},
-						Def.Sprite {
-							Texture = NEWSKIN:get_path(skin_name, "_mparts 2x16 (doubleres).png"),
-							InitCommand = cmd(rotationz,240;spin;effectclock,"beat";effectmagnitude,0,0,-60),
+							Texture = NEWSKIN:get_path(skin_name, "_mine gen round 1x1 (quadres).png"),
+							InitCommand = cmd(spin;effectclock,"beat";effectmagnitude,0,0,-120),
 						},
 					}
 				},
 				NewSkinTapPart_Lift = {
 					state_map = liftState,
 					actor = Def.Sprite {
-						Texture = NEWSKIN:get_path(skin_name, "_fallback tap lift 2x1 (doubleres).png"),
-						InitCommand = cmd(zoom,mineZoom),
+						Texture = NEWSKIN:get_path(skin_name, "_" .. tap.image .. "4x16 (quadres).png"),
+						InitCommand = cmd(rotationz,tap.rotZ;rotationy,tap.rotY),
 					}
 				},
 			},
@@ -882,7 +874,7 @@ Column Color Reference for "key_generic" & "key_thumb":
 				TapNoteSubType_Hold = {
 					{
 						state_map = inactiveState,
-						textures = {"_" .. hold.image .. "_hold gen 2x1 (quadres).png"},
+						textures = {"_" .. hold.image .. "2x1 (quadres).png"},
 						flip = hold.flip,
 						disable_filtering = false,
 						length_data = {
@@ -895,10 +887,13 @@ Column Color Reference for "key_generic" & "key_thumb":
 					},
 					{
 						state_map = activeState,
-						textures = {"_" .. hold.image .. " hold 4x1 (doubleres).png"},
+						textures = {"_" .. hold.image .. "2x1 (quadres).png"},
 						flip = hold.flip,
 					},
 				},
+			
+-- *** KAI LEAVES ***
+				
 				TapNoteSubType_Roll = {
 					{
 						state_map = inactiveState,
