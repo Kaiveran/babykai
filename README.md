@@ -13,6 +13,8 @@ In the future, I hope to use this as a base for a more sophisticated noteskin wi
   * Variants – different color and note schemes as you please
       * Default – quant color inside, lane color outside.
       * Inverted – lane color inside, quant color outside.
+      * PureNote – only quant color, no outline.
+      * Flat – only lane color, no outline.
       * "Edit" versions of each of these, with quantized mines and clearly distinguished fakes.
   * New Quants – toggle new experimental quantizations for quintuplets (up to 20ths), septuplets (up to 28ths), and nonuplets (up to 36ths.)
   * Receptor Warnings – wanna steal these from Kyzentun 'cause they're cool. I want mine to darken the receptors though, instead of turning any specific color (ideally, warning color would be customizable, but that would require non-monochrome colorizable graphics, unlike the current masks).
